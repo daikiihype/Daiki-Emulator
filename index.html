@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>DAIKI Emulador 🎮</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎮 DAIKI Emulator</h1>
+
+<div id="gameList">
+  <div class="game" onclick="loadGame('BubleBoble.nes')">
+    <img src="img/Bubble.png">
+    <p>Bubble Bobble</p>
+  </div>
+
+  <div class="game" onclick="loadGame('SaintSeiya.nes')">
+    <img src="img/Seiya.png">
+    <p>Saint Seiya</p>
+  </div>
+
+  <div class="game" onclick="loadGame('Honno.nes')">
+    <img src="img/Honno.png">
+    <p>Doge Danpei</p>
+  </div>
+</div>
+
+<!input type="file" id="romInput" accept=".nes">
+
+<canvas id="screen" width="256" height="240"></canvas>
+  <br>
+
+  
+
+  <button id="playBtn" onclick="startGame()">▶️ Jogar</button>
+  <div id="playerUI">
+  <button onclick="toggleFullscreen()">⛶ Tela cheia</button>
+</div>
+<div id="saveUI">
+  <button onclick="saveGame()">💾 Salvar</button>
+  <button onclick="loadSave()">📂 Carregar</button>
+</div>
+
+  <script src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
