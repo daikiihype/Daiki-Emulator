@@ -1,36 +1,20 @@
 body {
-  background: url('img/fundo.jpg');
-  color: rgb(0, 0, 0);
-  text-align: center;
+  margin: 0;
   font-family: Arial, sans-serif;
+
+  background: url('img/fundo.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  color: white;
+  text-align: center;
 }
 
-canvas {
-    width: 90%;
-    max-width: 900px;
-    aspect-ratio: 256 / 240;
-    image-rendering: pixelated;
-  height: auto;
-
-  border: 4px solid #000000;
+/* TÍTULO */
+h1 {
   margin-top: 20px;
-
-  image-rendering: pixelated;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #ffffff;
-  border: none;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #000000;
-}
+/* CATÁLOGO */
 #gameList {
   display: flex;
   gap: 20px;
@@ -51,26 +35,16 @@ button:hover {
 .game:hover {
   transform: scale(1.1);
 }
-#playerUI {
-  margin-top: 20px;
+
+/* PLAYER CENTRALIZADO */
+#player {
+  margin-top: 30px;
 }
 
-#playerUI button {
-  padding: 10px 20px;
-  background: #0ea5e9;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-#playerUI button:hover {
-  background: #0284c7;
-}
-
+/* CANVAS (AGORA ÚNICO) */
 canvas {
-  width: 90%;
-  max-width: 900px;
+  width: 768px;
+  height: 720px;
   aspect-ratio: 256 / 240;
 
   border: 4px solid #22c55e;
@@ -80,19 +54,35 @@ canvas {
 
   image-rendering: pixelated;
 }
-#saveUI {
+
+/* CONTROLES */
+#controls {
   margin-top: 15px;
 }
 
-#saveUI button {
+#controls button {
   margin: 5px;
-  padding: 10px;
-  background: #facc15;
+  padding: 10px 15px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
-#saveUI button:hover {
-  background: #eab308;
+/* BOTÕES ESPECÍFICOS */
+#controls button:nth-child(1) {
+  background: #0ea5e9;
+  color: white;
+}
+
+#controls button:nth-child(2) {
+  background: #facc15;
+}
+
+#controls button:nth-child(3) {
+  background: #22c55e;
+}
+
+/* UPLOAD */
+#romInput {
+  margin-top: 20px;
 }
